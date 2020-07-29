@@ -66,7 +66,7 @@ func (e *wktEncoder) encode(g *Geometry) (string, error) {
 	if cstr == nil {
 		return "", Error()
 	}
-	ret := C.GoString(str)
+	ret := C.GoString(cstr)
 	runtime.KeepAlive(e)
 	return ret, nil
 }
